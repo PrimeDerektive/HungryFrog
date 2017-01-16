@@ -1,0 +1,59 @@
+< Animated Housefly >
+
+ABOUT:
+ • A game-ready housefly with 2 variations and 19 animations (Listed below)
+ • Latest Version: 06-14-2015
+ 
+MODEL: (Insect_Fly*.fbx)
+ • SPEC: One mesh, 1000 polygons, 620 Vertices
+ • RIG: 36 Joints
+ • DIMENSIONS: X: 0.88cm, Y: 0.15cm, Z: 0.48cm
+
+TEXTURE: (Insect_Fly##_*.*)
+ • VARIATION: Green(00), Striped(01)
+ • TYPE: Diffuse(D), Specular(S), Gloss(G), Normal(N), Alpha(A)
+ • FORMAT: .png (512 x 256 24 bits) .tga (512 x 256 32 bits)
+
+ANIMATION: (Insect_Fly*.fbx)
+ • INFO: 19 Animations, NTSC 30fps
+ • 00. F000-F001 (01F): Bind Pose (F: Frame)
+ • 01. F002-F018 (16F): Idle Loop
+ • 02 .F018-F021 (03F): Idle Feed Start
+ • 02 .F021-F037 (16F): Idle Feed Loop 
+ • 02 .F037-F040 (03F): Idle Feed End
+ • 03. F040-F044 (04F): Idle Look Left
+ • 04. F060-F064 (04F): Idle Look Left Off
+ • 05. F080-F084 (04F): Idle Look Right
+ • 06. F100-F104 (04F): Idle Look Right Off
+ • 07. F120-F128 (08F): Turn Left 90
+ • 08. F140-F148 (08F): Turn Left 90 Off
+ • 09. F160-F168 (08F): Turn Right 90
+ • 10. F180-F188 (08F): Turn Right 90 Off
+ • 11. F200-F216 (16F): Turn Left 180
+ • 12. F230-F246 (16F): Turn Right 180
+ • 13 .F260-F272 (12F): Move Forward Start (Z: 0.75cm)
+ • 13 .F272-F284 (12F): Move Forward Cycle (Z: 0.75cm)
+ • 13 .F296-F308 (12F): Move Forward Stop (Z: 0.75cm)
+ • 14. F370-F382 (12F): Hop Forward (Z: 1cm)
+ • 15. F390-F402 (12F): Hop Backward (Z: 1cm)
+ • 16. F420-F432 (12F): Hop Left (X: 1cm)
+ • 17. F440-F452 (12F): Hop Right (X: 1cm)
+ • 18. F470-F482 (12F): Hop
+ • 19 .F500-F510 (10F): Flight Take Off
+ • 19 .F510-F518 (08F): Flight Loop
+ • 19 .F550-F560 (10F): Flight Land
+ • 19 .F550-F560 (10F): Flight Land
+ • Insect_Fly_Game.fbx: Root Node (Insect_Fly_Origin) has zero animation for user input
+ • Insect_Fly.fbx: Root Node (Insect_Fly_Origin) has translation animations as demo
+ 
+TAG: 
+ Creature Animal Insect Bug Pest Housefly House Fly Winged Wings
+
+LINK / CONTACT:
+ • SKETCHFAB (00): https://sketchfab.com/models/9709bb3d1543477bbb285678fcd993d3
+ • SKETCHFAB (01): https://sketchfab.com/models/9e3216d18715444c83c2f1e792bf68af
+ • TURBOSQUID: http://www.turbosquid.com/Search/Artists/hinxlinx
+ • CGTRADER: http://www.cgtrader.com/hinxlinx
+ • EMAIL: hinxlinx@yahoo.com
+ 
+Eric "Lynx" Lin © 2015 All Rights Reserved

@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 39184a972855746449d48a27d33a5bf0
+timeCreated: 1484173150
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _Null
+    100002: _Null 1
+    100004: _Null 10
+    100006: _Null 2
+    100008: _Null 3
+    100010: _Null 4
+    100012: _Null 5
+    100014: _Null 6
+    100016: _Null 7
+    100018: _Null 8
+    100020: _Null 9
+    100022: Abdomen00
+    100024: Abdomen01
+    100026: Foot00_L
+    100028: Foot00_R
+    100030: Foot01_L
+    100032: Foot01_R
+    100034: Foot02_L
+    100036: Foot02_R
+    100038: Head
+    100040: //RootNode
+    100042: Insect_Fly_LOD00
+    100044: Insect_Fly_Origin
+    100046: Knee00_L
+    100048: Knee00_R
+    100050: Knee01_L
+    100052: Knee01_R
+    100054: Knee02_L
+    100056: Knee02_R
+    100058: Leg00_L
+    100060: Leg00_R
+    100062: Leg01_L
+    100064: Leg01_R
+    100066: Leg02_L
+    100068: Leg02_R
+    100070: Mouthparts
+    100072: Root
+    100074: Thorax
+    100076: Toe00_L
+    100078: Toe00_R
+    100080: Toe01_L
+    100082: Toe01_R
+    100084: Toe02_L
+    100086: Toe02_R
+    100088: Tracheal00
+    100090: Wing00_L
+    100092: Wing00_R
+    100094: Wing01_L
+    100096: Wing01_R
+    400000: _Null
+    400002: _Null 1
+    400004: _Null 10
+    400006: _Null 2
+    400008: _Null 3
+    400010: _Null 4
+    400012: _Null 5
+    400014: _Null 6
+    400016: _Null 7
+    400018: _Null 8
+    400020: _Null 9
+    400022: Abdomen00
+    400024: Abdomen01
+    400026: Foot00_L
+    400028: Foot00_R
+    400030: Foot01_L
+    400032: Foot01_R
+    400034: Foot02_L
+    400036: Foot02_R
+    400038: Head
+    400040: //RootNode
+    400042: Insect_Fly_LOD00
+    400044: Insect_Fly_Origin
+    400046: Knee00_L
+    400048: Knee00_R
+    400050: Knee01_L
+    400052: Knee01_R
+    400054: Knee02_L
+    400056: Knee02_R
+    400058: Leg00_L
+    400060: Leg00_R
+    400062: Leg01_L
+    400064: Leg01_R
+    400066: Leg02_L
+    400068: Leg02_R
+    400070: Mouthparts
+    400072: Root
+    400074: Thorax
+    400076: Toe00_L
+    400078: Toe00_R
+    400080: Toe01_L
+    400082: Toe01_R
+    400084: Toe02_L
+    400086: Toe02_R
+    400088: Tracheal00
+    400090: Wing00_L
+    400092: Wing00_R
+    400094: Wing01_L
+    400096: Wing01_R
+    4300000: Insect_Fly_LOD00
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Insect_Fly_LOD00
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
