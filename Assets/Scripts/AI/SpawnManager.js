@@ -1,7 +1,9 @@
 ﻿#pragma strict
-import System.Collections;
+import System.Collections.Generic;
+import UltimatePooling;
 
-var enemyPrefab : Transform;
+var enemyPrefab : GameObject;
+var spawnRange : float = 20.0;
 var spawnTime : float = 2.0;
 var maxEnemies : int = 10;
 
@@ -17,21 +19,22 @@ function OnDisable(){
 
 function SpawnEnemy(){
 	if(enemies.Count < maxEnemies){
-		var spawnPoint : Vector3 = Random.insideUnitSphere * 30;
+		var spawnPoint : Vector3 = transform.position + Random.insideUnitSphere * spawnRange;
 		spawnPoint.y = Random.Range(1.0, 10.0);
-		var newEnemy = Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
-		newEnemy.LookAt(Camera.main.transform.position);
-		enemies.Add(newEnemy.gameObject);
+		var newEnemy = UltimatePool.spawn(enemyPrefab, spawnPoint, Quaternion.identity);
+		newEnemy.layer = LayerMask.NameToLayer("Enemy"); //appears to be a bug in UltimatePooling? it unsets the layer
+		enemies.Add(newEnemy);
 	}
 }
 
 function RemoveEnemy(enemy : GameObject, count : int){
 	enemies.Remove(enemy);
-	Destroy(enemy);
+	enemy.transform.parent = null;
+	UltimatePool.despawn(enemy);
 }
 
 function Reset(){
 	for(var enemy in enemies)
-		Destroy(enemy);
+		UltimatePool.despawn(enemy);
 	enemies.Clear();
 }

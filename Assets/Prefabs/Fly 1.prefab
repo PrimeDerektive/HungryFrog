@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 3
-  maxMoveDistance: 10
+  maxMoveDistance: 15
   gameManager: {fileID: 0}
 --- !u!135 &135000010716646252
 SphereCollider:

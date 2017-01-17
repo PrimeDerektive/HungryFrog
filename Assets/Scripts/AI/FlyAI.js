@@ -9,8 +9,9 @@ var gameManager : GameManager;
 private var startPos : Vector3;
 private var targetPos : Vector3 = Vector3.zero;
 
-function Start () {
+function OnEnable () {
 	startPos = transform.position;
+	transform.localScale = Vector3.one;
 	gameManager = GameObject.Find("GameManager").GetComponent.<GameManager>();
 	StartCoroutine(MoveRandomly());
 }

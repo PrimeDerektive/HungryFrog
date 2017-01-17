@@ -5,6 +5,7 @@
 
 public class MouseLookInEditor : MonoBehaviour
 {
+	/*
 	Vector2 _mouseAbsolute;
 	Vector2 _smoothMouse;
 
@@ -73,4 +74,5 @@ public class MouseLookInEditor : MonoBehaviour
 			transform.localRotation *= yRotation;
 		}
 	}
+	*/
 }

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4000013319894238}
   - component: {fileID: 198000013486364674}
   - component: {fileID: 199000013045772092}
-  - component: {fileID: 114000012782785722}
   - component: {fileID: 82000011220831620}
+  - component: {fileID: 114503985522696338}
   m_Layer: 0
   m_Name: TongueHit
   m_TagString: FxTemporaire
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
---- !u!114 &114000012782785722
+--- !u!114 &114503985522696338
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,10 +175,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011419313780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
+  m_Script: {fileID: 11500000, guid: b18bf77a2b0946f4f97c7128adef6839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
+  lifetime: 0.5
 --- !u!198 &198000010604067218
 ParticleSystem:
   m_ObjectHideFlags: 1

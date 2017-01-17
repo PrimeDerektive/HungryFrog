@@ -1,6 +1,7 @@
 ﻿#pragma strict
 import UnityEngine.Events;
 import System.Collections.Generic;
+import UltimatePooling;
 
 var points : Transform[];
 
@@ -24,7 +25,7 @@ var enemyLayer : LayerMask;
 var tongueExtendSound: AudioClip;
 var tongueRetractSound : AudioClip;
 var chewSound : AudioClip;
-var hitEffect : Transform;
+var hitEffect : GameObject;
 var comboEffect : TextMesh;
 var hitEnemies = new List.<HitEnemy>();
 
@@ -97,9 +98,9 @@ function Update(){
 		var tongueMiddleHit : RaycastHit;
 		if(Physics.Raycast(transform.position, tongueMiddleDir, tongueMiddleHit, tongueMiddleDir.magnitude, enemyLayer)){ 
 			Debug.Log("Hit a fly with tongueMiddle!");
-			var newHitEffect = Instantiate(hitEffect, tongueMiddleHit.point, Quaternion.FromToRotation(Vector3.up, tongueMiddleHit.normal));
+			var newHitEffect : GameObject = UltimatePool.spawn(hitEffect, tongueMiddleHit.point, Quaternion.FromToRotation(Vector3.up, tongueMiddleHit.normal));
 			newHitEffect.GetComponent.<AudioSource>().pitch = 1.0 + (0.1 * hitEnemies.Count);
-			newHitEffect.parent = tongueMiddleHit.transform;
+			newHitEffect.transform.parent = tongueMiddleHit.transform;
 			if(hitEnemies.Count){
 				var newComboEffect = Instantiate(comboEffect, tongueMiddleHit.point, Quaternion.FromToRotation(Vector3.up, tongueMiddleHit.normal));
 				newComboEffect.text = "x" + (hitEnemies.Count + 1).ToString();
@@ -120,9 +121,9 @@ function Update(){
 		var tongueEndHit : RaycastHit;
 		if(Physics.Raycast(tongueMiddle.position, tongueEndDir, tongueEndHit, tongueEndDir.magnitude, enemyLayer)){ 
 			Debug.Log("Hit a fly with tongueEnd!");
-			newHitEffect = Instantiate(hitEffect, tongueEndHit.point, Quaternion.FromToRotation(Vector3.up, tongueEndHit.normal));
+			newHitEffect = UltimatePool.spawn(hitEffect, tongueEndHit.point, Quaternion.FromToRotation(Vector3.up, tongueEndHit.normal));
 			newHitEffect.GetComponent.<AudioSource>().pitch = 1.0 + (0.1 * hitEnemies.Count);
-			newHitEffect.parent = tongueEndHit.transform;
+			newHitEffect.transform.parent = tongueEndHit.transform;
 			if(hitEnemies.Count){
 				newComboEffect = Instantiate(comboEffect, tongueEndHit.point, Quaternion.FromToRotation(Vector3.up, tongueEndHit.normal));
 				newComboEffect.text = "x" + (hitEnemies.Count + 1).ToString();
@@ -166,6 +167,14 @@ function Update(){
 	Debug.DrawLine(tongueMiddle.position, tongueEnd.position, Color.green);
 }
 
+function OnDisable(){
+	tongueOut = false;
+	tongueExtending = false;
+	tongueEnd.localPosition = Vector3.zero;
+	tongueMiddle.localPosition = Vector3.zero;
+	StopAllCoroutines();
+}
+
 function FireTongue(){
 	tongueOut = true;
 	tongueExtending = true;
@@ -175,6 +184,7 @@ function FireTongue(){
 	audioSource.PlayOneShot(tongueRetractSound, 0.75);
 	yield WaitForSeconds(0.35 * speedModifier);
 	for(var hitEnemy in hitEnemies){
+		hitEnemy.tr.parent = null;
 		eatEnemyEvent.Invoke(hitEnemy.tr.gameObject, hitEnemies.Count);
 	}
 	if(hitEnemies.Count){
